@@ -1,0 +1,87 @@
+@import '../../stylesheet/variable.scss';
+form{
+  width: 60%;
+  margin: 0 auto;
+  [type="submit"] {
+    background-color:$black;
+    border: 3px solid $white;
+    color:$white;
+    min-width: 180px;
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  [type="submit"]:hover {
+    color:$black;
+    background-color:$white;
+    border: 3px solid $black;
+  }
+  &.inputform {
+    width: 100%;
+  }
+  .form-group{
+    &.inputDynamic {
+      margin-bottom: 5px;
+      .form-control {
+        width: 75%;
+        display: inline;
+        margin: 10px 10px 0px 0px;
+      }
+      [type="button"] {
+        background-color: black;
+        border: 2px solid white;
+        color: #fff;
+        min-width: 80px;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+    button {
+      float: right;
+      position: relative;
+      display: inline-block;
+      top: -34px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+    }
+  } 
+  
+}
+.sun-editor {
+  margin-top: 10px !important;
+}
+.sun-editor-editable {
+  font-size: 18px !important;
+}
+.sun-editor .se-tooltip {
+  top: 0px !important;
+  right: 0px !important;
+}
+.btn-group-toggle {
+  margin-left: 20px;
+}
+.form-control {
+  border-radius: 0px;
+}
+.form-check {
+  font-size: 20px;
+}
+.form-check-input {
+  margin-top: 0.6rem;
+}
+@media screen and (max-width: 767px) {
+  form {
+    width: 100%;
+  }
+  html .form-group.inputDynamic [type="button"] {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,142 @@
+@import "../../stylesheet/variable.scss";
+.react-tabs {
+  .react-tabs__tab-list {
+    border: none !important;
+    text-align: center;
+    margin-bottom: 75px !important;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px !important;
+    }
+  }
+  .react-tabs__tab-panel {
+    border: 2px solid $silver;
+    padding: 30px;
+    h2 {
+      margin: 30px 0px;
+      text-transform: uppercase;
+      font-size: 26px;
+    }
+  }
+  .react-tabs__tab {
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $silver;
+    text-align: center;
+  }
+  .react-tabs__tab--selected {
+    background: transparent !important;
+    border-color: none !important;
+    color: $white !important;
+    border: none !important;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50px;
+      height: 0px;
+      width: 35%;
+      border-bottom: 5px solid $white;
+      top: -9px;
+    }
+  }
+}
+
+.react-tabs .react-tabs__tab-panel h2,
+.misc h6 {
+  margin-bottom: 20px !important;
+  color: #dcdcdc;
+}
+
+.onboarding,
+.funCrew,
+.misc {
+  .react-tabs__tab-panel li {
+    border-bottom: 0;
+    list-style: disc;
+    padding: 10px 10px 0;
+    margin: 0 24px;
+    color: #dcdcdc;
+  }
+}
+
+.onboarding,
+.funCrew,
+.misc,
+.DL {
+  p,
+  h4,
+  th {
+    color: #dcdcdc;
+  }
+}
+
+.misc td {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.funCrew ul,
+.border-blk {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px dotted #dcdcdc;
+}
+
+.misc a {
+  color: #dcdcdc;
+  text-decoration: underline;
+  display: inline-block;
+}
+.misc a:hover,
+.misc a:focus {
+  color: #dcdcdc;
+}
+
+.misc p {
+  margin-bottom: 0;
+}
+
+.misc h5 {
+  color: #5eb4e7;
+}
+
+.misc p a {
+  margin-bottom: 20px;
+}
+.misc .border-blk a {
+  margin-bottom: 0;
+}
+
+.misc .react-tabs__tab-panel li ol li {
+  padding-top: 0;
+}
+
+.onboarding a {
+  color: #fff;
+  text-decoration: underline;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .panel-blk {
+    .react-tabs .react-tabs__tab {
+      min-width: 50px !important;
+      padding: 0 8px;
+    }
+  }
+  .misc ol {
+    padding-left: 0;
+  }
+  .misc .react-tabs__tab-panel li ol li {
+    padding-top: 0;
+    margin-right: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  .misc .border-blk a {
+    word-break: break-word;
+  }
+}

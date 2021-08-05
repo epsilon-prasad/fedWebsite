@@ -1,0 +1,35 @@
+@import './variable.scss';
+.page{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+body {
+  background: $black;
+  position: relative;
+  color:$white;
+  height: 100%;
+  --color-text:#fff;
+  --color-bg: #252525;
+  --color-link:#fff;
+  --color-link-hover: #f20c40;
+  --color-bg-item1: #15171b;
+  --color-bg-item2: #2c35b7;
+  --color-bg-item3: #0f1013;
+  --color-bg-item4: #1d2027;
+  --color-bg-item5: #0f1013;
+  --color-item-alt: #494d54;
+  --color-quote: #aaa;
+  --color-info: #57535a;
+  --color-title: #e23434;
+  --color-tagline: #e2e2e2;
+}
+
+.home{
+  .headerTop{
+    .menu-trigger{
+      display: none;
+    }
+  }
+}

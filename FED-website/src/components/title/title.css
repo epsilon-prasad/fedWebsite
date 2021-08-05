@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
+
+.title {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+a:hover {
+    color: #1e1a1b;
+    outline: 0;
+}
+.link {
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    font-size: 4em;
+    line-height: 1;
+    color: #9e9ba4;
+    display: inline-block;
+    margin:0 0 50px 0px;
+}
+.link-name {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #3A4945;
+    padding: 0.125em 0 0.125em;
+}
+.link-name::before, 
+.link-name::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    background: #3A4945;
+    position: absolute;
+    -webkit-transform: scale3d(0,1,1);
+    transform: scale3d(0,1,1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+.link-name::before {
+    right: 0;
+    top: 0;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+.link-name::after {
+    left: 0;
+    bottom: 0;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+.link-name.effect::before, 
+.link-name.effect::after {
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+.link-name span {
+    position: relative;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+.link-name:hover span {
+    color: transparent;
+}
+.link-name span::before, 
+.link-name span::after {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.link-name span::before {
+    content: attr(data-letters-l);
+    left: 0;
+    -webkit-transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px,0,0);
+}
+.link-name span::after {
+    content: attr(data-letters-r);
+    right: 0;
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0);
+}
+.link-name.effect span::before, 
+.link-name.effect span::after {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
